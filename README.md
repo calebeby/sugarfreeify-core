@@ -16,5 +16,5 @@ sugarfreeify({
   outputExt: 'html',
   transform: text =>
     reshape(reshapeConfig).process(text).then(res => res.output())
-}).then(console.log('done'))
+}).promise.then(console.log('done'))
 ```
