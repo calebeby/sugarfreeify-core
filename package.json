@@ -1,6 +1,6 @@
 {
   "name": "sugarfreeify-core",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Transform a project with sugar syntax to sugarfree syntax",
   "main": "index.js",
   "author": "Caleb Eby (@calebeby)",
@@ -9,14 +9,18 @@
     "sugarfreeify": "index.js"
   },
   "scripts": {
-    "test": "ava"
+    "test": "nyc ava",
+    "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov"
   },
   "dependencies": {
     "globby": "^6.1.0",
+    "mitt": "^1.1.2",
     "then-fs": "^2.0.0"
   },
   "devDependencies": {
     "ava": "^0.21.0",
+    "codecov": "^2.2.0",
+    "nyc": "^11.0.3",
     "reshape": "^0.4.1",
     "reshape-beautify": "^0.1.2",
     "rmfr": "^1.0.3",

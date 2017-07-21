@@ -13,7 +13,6 @@ const reshapeConfig = {
 }
 
 test('creates a new sugarless file', async t => {
-  const input = await fs.readFile('test/input.sml', 'utf-8')
   const expected = await fs.readFile('test/expected.html', 'utf-8')
 
   await rmfr('test/input.html')
@@ -23,9 +22,29 @@ test('creates a new sugarless file', async t => {
     outputExt: 'html',
     transform: text =>
       reshape(reshapeConfig).process(text).then(res => res.output())
-  })
+  }).promise
 
   const actual = await fs.readFile('test/input.html', 'utf-8')
 
   t.deepEqual(expected, actual)
+})
+
+test.cb('emits proper events', t => {
+  t.plan(3)
+
+  const { emitter } = sugarfreeify({
+    inputExt: 'sss',
+    outputExt: 'css',
+    transform: text => text
+  })
+    
+  emitter.on('finishedFile', ({inputFile, outputFile}) => {
+    t.deepEqual(inputFile, 'test/foo.sss')
+    t.deepEqual(outputFile, 'test/foo.css')
+  })
+
+  emitter.on('finishedAll', () => {
+    t.pass()
+    t.end()
+  })
 })
