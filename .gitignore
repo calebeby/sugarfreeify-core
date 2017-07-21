@@ -1,1 +1,9 @@
 test/input.html
+test/foo.css
+
+coverage
+.nyc_output
+coverage.lcov
+
+node_modules
+yarn-error.log
