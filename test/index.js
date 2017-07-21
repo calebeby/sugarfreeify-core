@@ -12,7 +12,7 @@ const reshapeConfig = {
   plugins: [beautify()]
 }
 
-test(async t => {
+test('creates a new sugarless file', async t => {
   const input = await fs.readFile('test/input.sml', 'utf-8')
   const expected = await fs.readFile('test/expected.html', 'utf-8')
 
