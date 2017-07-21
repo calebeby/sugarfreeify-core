@@ -1,10 +1,11 @@
 import test from 'ava'
 import fs from 'then-fs'
 import sugarfreeify from '..'
+import rmfr from 'rmfr'
 
-const reshape = require('reshape')
-const sugarml = require('sugarml')
-const beautify = require('reshape-beautify')
+import reshape from 'reshape'
+import sugarml from 'sugarml'
+import beautify from 'reshape-beautify'
 
 const reshapeConfig = {
   parser: sugarml,
@@ -15,7 +16,7 @@ test(async t => {
   const input = await fs.readFile('test/input.sml', 'utf-8')
   const expected = await fs.readFile('test/expected.html', 'utf-8')
 
-  await fs.unlinkSync('test/input.html')
+  await rmfr('test/input.html')
 
   await sugarfreeify({
     inputExt: 'sml',

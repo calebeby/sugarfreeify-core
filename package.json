@@ -13,12 +13,13 @@
   },
   "dependencies": {
     "globby": "^6.1.0",
-    "reshape": "^0.4.1",
-    "reshape-beautify": "^0.1.2",
-    "sugarml": "^0.6.0",
     "then-fs": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "^0.21.0"
+    "ava": "^0.21.0",
+    "reshape": "^0.4.1",
+    "reshape-beautify": "^0.1.2",
+    "rmfr": "^1.0.3",
+    "sugarml": "^0.6.0"
   }
 }
