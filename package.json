@@ -1,6 +1,6 @@
 {
   "name": "sugarfreeify-core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Transform a project with sugar syntax to sugarfree syntax",
   "main": "index.js",
   "author": "Caleb Eby (@calebeby)",
