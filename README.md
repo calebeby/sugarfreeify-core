@@ -3,6 +3,8 @@
 
 # Sugarfreeify-core
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/calebeby/sugarfreeify-core.svg)](https://greenkeeper.io/)
+
 API for [sugarfreeify](https://github.com/calebeby/sugarfreeify)
 
 ## Usage
