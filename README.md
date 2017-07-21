@@ -1,9 +1,8 @@
 [![Build Status](https://travis-ci.org/calebeby/sugarfreeify-core.svg?branch=master)](https://travis-ci.org/calebeby/sugarfreeify-core)
 [![codecov](https://codecov.io/gh/calebeby/sugarfreeify-core/branch/master/graph/badge.svg)](https://codecov.io/gh/calebeby/sugarfreeify-core)
+[![Greenkeeper badge](https://badges.greenkeeper.io/calebeby/sugarfreeify-core.svg)](https://greenkeeper.io/)
 
 # Sugarfreeify-core
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/calebeby/sugarfreeify-core.svg)](https://greenkeeper.io/)
 
 API for [sugarfreeify](https://github.com/calebeby/sugarfreeify)
 
